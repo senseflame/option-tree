@@ -92,7 +92,7 @@ if ( ! class_exists( 'OT_Cleanup' ) ) {
 		 */
 		public function cleanup_notice() {
 
-			if ( 'appearance_page_ot-cleanup' !== get_current_screen()->id ) {
+			if ( 'appearance-page-ot-cleanup' !== get_current_screen()->id ) {
 				$link = sprintf( '<a href="%s">%s</a>', admin_url( 'themes.php?page=ot-cleanup' ), apply_filters( 'ot_cleanup_menu_title', esc_html__( 'OptionTree Cleanup', 'option-tree' ) ) );
 
 				/* translators: %s: internal admin page URL */

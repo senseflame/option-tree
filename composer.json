@@ -1,10 +1,18 @@
 {
-  "name": "valendesigns/option-tree",
+  "name": "senseflame/control-option-tree",
   "description": "Theme Options UI Builder for WordPress.",
   "version": "2.7.3",
   "type": "wordpress-plugin",
-  "homepage": "https://github.com/valendesigns/option-tree",
+  "homepage": "https://github.com/senseflame/control-option-tree",
   "license": "GPL-2.0-or-later",
+  "autoload": {
+		"files": [
+			"control-options-tree.php"
+		],
+		"psr-4": {
+			"ControlPatterns\\": "src/"
+		}
+	},
   "authors": [
     {
       "name": "Derek Herman",

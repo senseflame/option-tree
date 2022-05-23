@@ -860,7 +860,7 @@ if ( ! function_exists( 'ot_admin_styles' ) ) {
 			array(
 				'toplevel_page_ot-settings',
 				'optiontree_page_ot-documentation',
-				'appearance_page_ot-theme-options',
+				'appearance-page-ot-theme-options',
 			)
 		);
 

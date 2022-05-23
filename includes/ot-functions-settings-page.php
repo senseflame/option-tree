@@ -112,7 +112,7 @@ if ( ! function_exists( 'ot_type_theme_options_ui' ) ) {
 		$count = 0;
 
 		// Loop through each contextual_help content section.
-		echo '<ul class="option-tree-setting-wrap option-tree-sortable" id="option_tree_settings_help" data-name="' . esc_attr( ot_settings_id() ) . '[contextual_help][content]">';
+		echo '<ul class="option-tree-setting-wrap option-tree-sortable" id="option-tree-settings-help" data-name="' . esc_attr( ot_settings_id() ) . '[contextual_help][content]">';
 
 		if ( isset( $settings['contextual_help']['content'] ) ) {
 
@@ -458,7 +458,7 @@ if ( ! function_exists( 'ot_type_modify_layouts' ) ) {
 		echo '<input type="text" name="' . esc_attr( ot_layouts_id() ) . '[_add_new_layout_]" value="" class="widefat option-tree-ui-input" autocomplete="off" />';
 
 		// Loop through each layout.
-		echo '<ul class="option-tree-setting-wrap option-tree-sortable" id="option_tree_layouts">';
+		echo '<ul class="option-tree-setting-wrap option-tree-sortable" id="option-tree-layouts">';
 
 		if ( is_array( $layouts ) && ! empty( $layouts ) ) {
 

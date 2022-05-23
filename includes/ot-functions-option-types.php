@@ -231,7 +231,7 @@ if ( ! function_exists( 'ot_type_background' ) ) {
 			echo '<input type="text" name="' . esc_attr( $field_name ) . '[background-image]" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( isset( $field_value['background-image'] ) ? $field_value['background-image'] : '' ) . '" class="widefat option-tree-ui-upload-input ' . esc_attr( $field_class ) . '" placeholder="' . esc_html__( 'background-image', 'option-tree' ) . '" />';
 
 			// Add media button.
-			echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . esc_attr( $post_id ) . '" title="' . esc_html__( 'Add Media', 'option-tree' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'option-tree' ) . '</a>';
+			echo '<a href="javascript:void(0);" class="ot-upload-media option-tree-ui-button button button-primary light" rel="' . esc_attr( $post_id ) . '" title="' . esc_html__( 'Add Media', 'option-tree' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'option-tree' ) . '</a>';
 
 			echo '</div>';
 
@@ -3137,7 +3137,7 @@ if ( ! function_exists( 'ot_type_upload' ) ) {
 		echo '<input type="text" name="' . esc_attr( $field_name ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( $field_value ) . '" class="widefat option-tree-ui-upload-input ' . esc_attr( $field_class ) . '" />';
 
 		// Add media button.
-		echo '<a href="javascript:void(0);" class="ot_upload_media option-tree-ui-button button button-primary light" rel="' . esc_attr( $post_id ) . '" title="' . esc_html__( 'Add Media', 'option-tree' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'option-tree' ) . '</a>'; // phpcs:ignore
+		echo '<a href="javascript:void(0);" class="ot-upload-media option-tree-ui-button button button-primary light" rel="' . esc_attr( $post_id ) . '" title="' . esc_html__( 'Add Media', 'option-tree' ) . '"><span class="icon ot-icon-plus-circle"></span>' . esc_html__( 'Add Media', 'option-tree' ) . '</a>'; // phpcs:ignore
 
 		echo '</div>';
 

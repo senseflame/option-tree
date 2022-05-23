@@ -419,7 +419,7 @@
       OT_UI.parse_condition();
     },
     init_upload: function() {
-      $(document).on('click', '.ot_upload_media', function() {
+      $(document).on('click', '.ot-upload-media', function() {
         var field_id            = $(this).parent('.option-tree-ui-upload-parent').find('input').attr('id'),
             post_id             = $(this).attr('rel'),
             save_attachment_id  = $('#'+field_id).hasClass('ot-upload-attachment-id'),

@@ -733,6 +733,5 @@ if ( ! class_exists( 'OT_Loader' ) && defined( 'ABSPATH' ) ) {
 	 * @since 2.0
 	 */
 	new OT_Loader();
-	include __DIR__.'/vendor/autoload.php';
 }
 

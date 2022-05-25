@@ -1,5 +1,5 @@
 === Control OptionTree ===
-Contributors: valendesigns, razib_
+Contributors: valendesigns
 Tags: options, theme options, meta boxes, settings
 Requires at least: 3.8
 Tested up to: 5.2

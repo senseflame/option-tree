@@ -4,15 +4,7 @@
   "version": "2.7.3",
   "type": "wordpress-plugin",
   "homepage": "https://github.com/senseflame/control-option-tree",
-  "license": "GPL-2.0-or-later",
-  "autoload": {
-		"files": [
-			"control-options-tree.php"
-		],
-		"psr-4": {
-			"ControlPatterns\\": "src/"
-		}
-	},
+  "license": "GPL-2.0-or-later",  
   "authors": [
     {
       "name": "Derek Herman",
@@ -27,7 +19,7 @@
   },
   "require-dev": {
 	"brainmaestro/composer-git-hooks": "^2.6.0",
-	"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+	"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
 	"phpcompatibility/phpcompatibility-wp": "*",
 	"php-coveralls/php-coveralls": "^2.1",
 	"slowprog/composer-copy-file": "0.2.1",

@@ -436,7 +436,10 @@ $tab-width: 201px;
 
       a {
         color: #21759b;
-        display: block;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 5px;
         font-weight: 600;
         line-height: 1.2;
         padding: 10px 5px 10px 12px;
@@ -771,15 +774,16 @@ div.option-tree-ui-media-wrap {
   margin-right: 45px;
   padding: 0px;
   position: relative;
+  .ot-upload-media {
+    top: 0px;
+    margin: 0px !important;
+    position: absolute;
+    right: -45px;
+    text-indent: -9999px;
+  }
 }
 
-.ot-upload-media {
-  top: 0px;
-  margin: 0px !important;
-  position: absolute;
-  right: -45px;
-  text-indent: -9999px;
-}
+
 
 .option-tree-ui-media-wrap a.option-tree-ui-remove-media {
   float: none !important;

@@ -1543,13 +1543,13 @@
 
 #option-tree-settings-api > .ui-tabs {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	border-top: none;
 	margin: 0 5px 0 2px;
 	min-width: 533px;
 	padding-bottom: 5px;
 	position: relative;
-	box-shadow: inset 146px 0 0 #f1f1f1, inset 147px 0 0 #ccc, 0 1px 3px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 196px 0 0 #f1f1f1, inset 197px 0 0 #dee2e6, 0 1px 3px rgba(0, 0, 0, 0.05);
 	border-radius: 0 0 2px 2px;
 }
 
@@ -1666,7 +1666,7 @@
 }
 
 .admin-color-light #option-tree-header li a {
-	color: #ccc;
+	color: #dee2e6;
 }
 
 .admin-color-light #option-tree-header li a:hover {
@@ -1790,11 +1790,11 @@
 /* midnight */
 .admin-color-midnight #option-tree-header {
 	background: #363b3f;
-	color: #f1f2f3;
+	color: #f8f9fa;
 }
 
 .admin-color-midnight #option-tree-header li a {
-	color: #f1f2f3;
+	color: #f8f9fa;
 }
 
 .admin-color-midnight #option-tree-header li a:hover {
@@ -1888,7 +1888,7 @@
   ---------------------------------------------------*/
 #option-tree-sub-header {
 	background: #fafafa;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	border-top: none;
 	display: block;
 	margin: 0 5px 0 2px;
@@ -1907,7 +1907,7 @@
 	list-style: none;
 	margin: 0 0 0 -4px;
 	padding: 1em 0;
-	width: 151px;
+	width: 201px;
 }
 
 .wrap.settings-wrap .ui-tabs-nav li {
@@ -1915,28 +1915,32 @@
 	border-right-width: 0;
 	display: block;
 	margin: 0;
-	-webkit-border-radius: 2px 0 0 2px;
-	-moz-border-radius: 2px 0 0 2px;
 	border-radius: 2px 0 0 2px;
 }
 
 .wrap.settings-wrap .ui-tabs-nav li.ui-state-active {
 	background: #fff;
-	border-color: #ccc;
+	border-color: #dee2e6;
 	color: #000;
 }
 
 .wrap.settings-wrap .ui-tabs-nav li a {
 	color: #21759b;
-	display: block;
-	line-height: 18px;
-	padding: 5px 5px 5px 12px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: 5px;
+	font-weight: 600;
+	line-height: 1.2;
+	padding: 10px 5px 10px 12px;
 	text-decoration: none;
 }
 
+.wrap.settings-wrap .ui-tabs-nav li a:focus,
 .wrap.settings-wrap .ui-tabs-nav li a:hover {
 	color: #000;
 	outline: none;
+	box-shadow: none;
 }
 
 .wrap.settings-wrap .ui-tabs-nav li.ui-state-active a {
@@ -1965,10 +1969,14 @@
   :: Format Setting Label
   ---------------------------------------------------*/
 .format-setting-label {
-	border-bottom: 1px dashed #ccc;
+	border-bottom: 1px dashed #dee2e6;
 	margin: 0 0 20px 0;
 	padding: 5px 0 1px 0;
 	width: 100%;
+}
+
+.format-setting-label .label {
+	margin: 0;
 }
 
 #option-tree-settings-api .description h3,
@@ -1998,7 +2006,6 @@
 	line-height: 1.23;
 	letter-spacing: 0;
 	padding: 0 0 9px 0;
-	-webkit-user-select: text;
 	text-shadow: none;
 }
 
@@ -2118,7 +2125,7 @@
 }
 
 #option-tree-settings-api blockquote:before {
-	color: #ccc;
+	color: #dee2e6;
 	content: "“";
 	display: block;
 	font-size: 400%;
@@ -2193,7 +2200,7 @@
 input.option-tree-ui-upload-input,
 input.option-tree-ui-input {
 	background: #fff;
-	border: 1px solid #ccc !important;
+	border: 1px solid #dee2e6 !important;
 	line-height: 17px;
 	font-size: 12px;
 	margin-bottom: 5px !important;
@@ -2234,7 +2241,7 @@ div.option-tree-ui-media-wrap {
 
 .option-tree-ui-media-wrap img {
 	background: #fafafa;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	padding: 4px;
 	display: block;
 	float: left;
@@ -2251,7 +2258,7 @@ div.option-tree-ui-media-wrap {
 	position: relative;
 }
 
-.ot-upload-media {
+.option-tree-ui-upload-parent .ot-upload-media {
 	top: 0;
 	margin: 0 !important;
 	position: absolute;
@@ -2283,7 +2290,7 @@ div.option-tree-ui-media-wrap {
 .textarea,
 .ot-metabox-wrapper textarea {
 	width: 99.9%;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	font-family: Consolas, Monaco, monospace;
 	line-height: 1.5;
 	outline: 0;
@@ -2330,7 +2337,7 @@ div.option-tree-ui-media-wrap {
 }
 
 .option-tree-setting {
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	overflow: hidden;
 	position: relative;
 	border-radius: 2px;
@@ -2535,7 +2542,7 @@ div.option-tree-ui-media-wrap {
 
 .admin-color-midnight .option-tree-setting.is-section .open {
 	background: #363b3f;
-	color: #f1f2f3;
+	color: #f8f9fa;
 }
 
 .admin-color-midnight .option-tree-setting.is-section .open:hover {
@@ -2605,14 +2612,14 @@ div.option-tree-ui-media-wrap {
 }
 
 .ui-state-highlight {
-	border: 1px dashed #ccc;
+	border: 1px dashed #dee2e6;
 	display: block;
 	border-radius: 2px;
 }
 
 .option-tree-setting-body {
 	background: #fff;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #dee2e6;
 	display: none;
 	padding: 10px;
 	border-bottom-right-radius: 2px;
@@ -2655,15 +2662,15 @@ li ul .format-setting-label {
 
 .option-tree-save-layout .widefat {
 	float: left;
-	width: 128px !important;
+	width: 186px !important;
 	margin: 0;
 }
 
 .option-tree-active-layout {
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #dee2e6;
 	float: left;
 	padding: 10px 10px 10px 0;
-	min-width: 126px;
+	min-width: 176px;
 }
 
 .button.save-layout {
@@ -2734,7 +2741,7 @@ li ul .format-setting-label {
 
 .ot-option-group--icon {
 	background: #fafafa;
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #dee2e6;
 	display: inline-block;
 	font-size: 14px;
 	line-height: 14px;
@@ -2823,7 +2830,7 @@ li ul .format-setting-label {
   ---------------------------------------------------*/
 .select-wrapper {
 	background: #fff url(../images/ot-select.png) no-repeat right center;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	display: block;
 	float: left;
 	font-size: 12px;
@@ -2872,6 +2879,7 @@ select.option-tree-ui-select option {
 
 #option-tree-options-layouts-form .select-wrapper {
 	margin: 0;
+	width: 100%;
 }
 
 #option-tree-options-layouts-form select.option-tree-ui-select {
@@ -2943,7 +2951,7 @@ select.option-tree-ui-select option {
 
 .type-radio-image .option-tree-ui-radio-images img {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	cursor: pointer;
 	opacity: 0.8;
 	padding: 5px;
@@ -2969,7 +2977,7 @@ select.option-tree-ui-select option {
   ---------------------------------------------------*/
 .type-numeric-slider .format-setting-inner {
 	background: #fcfcfc;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	min-height: 41px;
 	padding: 5px;
 	box-sizing: border-box;
@@ -2990,7 +2998,7 @@ select.option-tree-ui-select option {
 
 .ot-numeric-slider.ui-slider {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	margin: 8px 8px 0 8px;
 	position: relative;
 	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
@@ -3138,7 +3146,7 @@ select.option-tree-ui-select option {
 .option-tree-ui-colorpicker-input-wrap .wp-color-picker,
 .option-tree-ui-colorpicker-input-wrap .wp-picker-default,
 .option-tree-ui-colorpicker-input-wrap .wp-picker-clear {
-	border-color: #ccc;
+	border-color: #dee2e6;
 	font-size: 12px !important;
 	height: 29px !important;
 	line-height: 27px !important;
@@ -3168,7 +3176,7 @@ select.option-tree-ui-select option {
 }
 
 .option-tree-ui-colorpicker-input-wrap .wp-picker-container .iris-picker {
-	border-color: #ccc;
+	border-color: #dee2e6;
 	margin: 0 5px 5px 0;
 	border-radius: 2px;
 }
@@ -3191,7 +3199,7 @@ select.option-tree-ui-select option {
   ---------------------------------------------------*/
 .option-tree-opacity-wrap {
 	background-color: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	border-top: none;
 	border-radius: 0 0 2px 2px;
 	direction: ltr;
@@ -3381,7 +3389,7 @@ select.option-tree-ui-select option {
 
 .option-tree-ui-buttons {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	margin: 11px 5px 0 2px;
 	min-width: 523px;
 	overflow: hidden;
@@ -3604,7 +3612,7 @@ ul.ot-gallery-list li img {
 
 	.on-off-switch {
 		background-color: #fff;
-		border: 1px solid #ccc;
+		border: 1px solid #dee2e6;
 		color: #333;
 		display: block;
 		font-size: 12px;
@@ -3736,7 +3744,7 @@ ul.ot-gallery-list li img {
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
 	background-color: #f7f7f7;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 }
 
 .ot-input-prepend .ot-add-on {
@@ -3751,7 +3759,7 @@ ul.ot-gallery-list li img {
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
 	background-color: #f7f7f7;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 }
 
 .ot-input-prepend input {
@@ -3805,14 +3813,14 @@ ul.ot-gallery-list li img {
 
 #option-tree-settings-api pre.ace-chrome {
 	background-color: #fff !important;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	border-radius: 2px;
 }
 
 #poststuff .type-css pre.ace-chrome,
 #poststuff .type-javascript pre.ace-chrome {
 	background-color: #fff !important;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	border-radius: 2px;
 }
 
@@ -3843,7 +3851,7 @@ ul.ot-gallery-list li img {
   ---------------------------------------------------*/
 .ui-datepicker {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	height: auto;
 	margin: 5px auto 0;
 	width: 216px;
@@ -3875,7 +3883,7 @@ ul.ot-gallery-list li img {
 }
 
 .ui-datepicker-prev {
-	color: #ccc;
+	color: #dee2e6;
 	display: inline-block;
 	font-family: option-tree-font, system-ui, -apple-system, Arial, sans-serif;
 	font-size: 16px;
@@ -3889,7 +3897,7 @@ ul.ot-gallery-list li img {
 }
 
 .ui-datepicker-next {
-	color: #ccc;
+	color: #dee2e6;
 	display: inline-block;
 	font-family: option-tree-font, system-ui, -apple-system, Arial, sans-serif;
 	font-size: 16px;
@@ -3951,7 +3959,7 @@ a.ui-datepicker-next {
 
 .ui-datepicker thead {
 	background-color: #fafafa;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #dee2e6;
 }
 
 .ui-datepicker th {
@@ -3963,7 +3971,7 @@ a.ui-datepicker-next {
 }
 
 .ui-datepicker tbody td {
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #dee2e6;
 	padding: 0;
 }
 
@@ -3972,7 +3980,7 @@ a.ui-datepicker-next {
 }
 
 .ui-datepicker tbody tr {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #dee2e6;
 }
 
 .ui-datepicker tbody tr:last-child {
@@ -4043,7 +4051,7 @@ a.ui-datepicker-next {
 
 .ui-datepicker .ui-datepicker-buttonpane button {
 	background: #f7f7f7;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	color: #555;
 	cursor: pointer;
 	float: right;
@@ -4098,7 +4106,7 @@ a.ui-datepicker-next {
 }
 
 .ui-datepicker-calendar + .ui-datepicker-buttonpane {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #dee2e6;
 }
 
 .ui-datepicker-multi-2 {
@@ -4125,7 +4133,7 @@ a.ui-datepicker-next {
 }
 
 .ui-datepicker-multi .ui-datepicker-buttonpane {
-	border-top: 1px solid #ccc !important;
+	border-top: 1px solid #dee2e6 !important;
 }
 
 /* default color scheme */
@@ -4171,7 +4179,7 @@ a.ui-datepicker-next {
 }
 
 .admin-color-light .ui-datepicker .ui-widget-header a {
-	color: #ccc;
+	color: #dee2e6;
 }
 
 .admin-color-light .ui-datepicker-prev {
@@ -4311,11 +4319,11 @@ a.ui-datepicker-next {
 /* midnight */
 .admin-color-midnight .ui-datepicker .ui-widget-header {
 	background: #363b3f;
-	color: #f1f2f3;
+	color: #f8f9fa;
 }
 
 .admin-color-midnight .ui-datepicker .ui-widget-header a {
-	color: #f1f2f3;
+	color: #f8f9fa;
 }
 
 .admin-color-midnight .ui-datepicker-prev {
@@ -4420,7 +4428,7 @@ a.ui-datepicker-next {
   :: Time Picker
   ---------------------------------------------------*/
 .ui-timepicker-div {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #dee2e6;
 	padding: 0 0.4em;
 }
 
@@ -4445,7 +4453,7 @@ a.ui-datepicker-next {
 
 .ui-timepicker-div .ui-slider-horizontal .ui-slider-handle {
 	background: #f7f7f7;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	color: #555;
 	cursor: pointer;
 	display: block;
@@ -4633,7 +4641,7 @@ a.ui-datepicker-next {
 
 .ot-metabox-tabs.ui-tabs .ot-metabox-panels {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #dee2e6;
 	margin: 7px 0 1px 0;
 	min-height: 140px;
 	overflow: hidden;
@@ -4646,7 +4654,7 @@ a.ui-datepicker-next {
 	list-style: none;
 	margin: 0 -1px 0 0;
 	padding: 18px 0 12px 0;
-	width: 151px;
+	width: 201px;
 }
 
 .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li {
@@ -4657,7 +4665,7 @@ a.ui-datepicker-next {
 	margin: 0;
 	outline: 0;
 	padding: 1px 0;
-	width: 150px;
+	width: 200px;
 	border-radius: 2px 0 0 2px;
 }
 
@@ -4669,28 +4677,33 @@ a.ui-datepicker-next {
 	margin: 0;
 	outline: 0;
 	padding: 1px 0;
-	width: 150px;
+	width: 200px;
 	border-radius: 2px 0 0 2px;
 }
 
 .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-active {
 	background: #fff;
-	border-color: #ccc;
+	border-color: #dee2e6;
 	color: #000;
 }
 
 .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li a {
 	color: #21759b;
-	display: block;
-	line-height: 18px;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 3px;
+	font-weight: 600;
+	line-height: 1.2;
 	outline: 0;
-	padding: 5px 5px 5px 12px;
+	padding: 8px 5px 8px 12px;
 	text-decoration: none;
 }
 
-.ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li a:hover {
+.ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li a:hover,
+.ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li a:focus {
 	color: #000;
 	outline: none;
+	box-shadow: none;
 }
 
 .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-active a {
@@ -4726,57 +4739,15 @@ a.ui-datepicker-next {
 	width: 100%;
 }
 
-.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav {
-	border-bottom: 1px solid #ccc;
-	float: none;
-	font-size: 12px !important;
-	height: 30px;
-	list-style: none;
-	margin: 2px 0 0 0;
-	padding: 0;
-	width: 100%;
-}
-
+.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav,
 #side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #dee2e6;
 	float: none;
-	font-size: 12px !important;
-	height: 30px;
 	list-style: none;
-	margin: 2px 0 0 0;
 	padding: 0;
 	width: 100%;
-	margin-top: 10px;
-}
-
-.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li.ui-state-default,
-#side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-default {
-	background: #fafafa;
-	border: 1px solid #ccc;
-	border-width: 1px 1px 0 1px;
-	display: block;
-	float: left;
-	margin: 0 0 0 3px;
-	padding: 0;
-	outline: 0;
-	border-radius: 2px 2px 0 0;
-}
-
-.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li:hover,
-#side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li:hover {
-	background: #f1f1f1;
-	border: 1px solid #ccc;
-	border-width: 1px 1px 0 1px;
-}
-
-.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li.ui-state-active,
-#side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-active {
-	background: #fff;
-	border-color: #ccc;
-	border-width: 1px 1px 0 1px;
-	color: #000;
-	padding: 0;
-	border-radius: 2px 2px 0 0;
+	margin: 2px 0 0 0;
+	height: 36px;
 }
 
 .ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li a,
@@ -4785,7 +4756,7 @@ a.ui-datepicker-next {
 	display: block;
 	line-height: 18px;
 	outline: 0;
-	padding: 6px 12px 5px 12px !important;
+	padding: 9px 15px 8px 15px !important;
 	text-decoration: none;
 }
 
@@ -4795,11 +4766,46 @@ a.ui-datepicker-next {
 	outline: none;
 }
 
+.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li:hover,
+#side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li:hover {
+	background: #f1f1f1;
+	border: 1px solid #dee2e6;
+	border-width: 1px 1px 0 1px;
+}
+
+.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li.ui-state-default,
+#side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-default {
+	background: #fafafa;
+	border: 1px solid #dee2e6;
+	border-width: 1px 1px 0 1px;
+	display: block;
+	float: left;
+	margin: 0 0 0 3px;
+	padding: 0;
+	outline: 0;
+	border-radius: 2px 2px 0 0;
+}
+
+.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li.ui-state-active,
+#side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-active {
+	background: #fff;
+	border-color: #dee2e6;
+	border-width: 1px 1px 0 1px;
+	color: #000;
+	padding: 0;
+	border-radius: 2px 2px 0 0;
+}
+
 .ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li.ui-state-active a,
 #side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-active a {
 	color: #000;
 	outline: none;
-	padding: 6px 12px 6px 12px !important;
+	padding: 9px 15px 9px 15px !important;
+}
+
+#side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav {
+	height: 30px;
+	margin-top: 10px;
 }
 
 .ot-theme-option-tabs.ui-tabs .ot-theme-option-panel {
@@ -4837,9 +4843,8 @@ a.ui-datepicker-next {
 	}
 
 	.ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav {
-		border-bottom: 1px solid #ccc;
+		border-bottom: 1px solid #dee2e6;
 		float: none;
-		font-size: 12px !important;
 		height: 30px;
 		list-style: none;
 		margin: 2px 0 0 0;
@@ -4853,7 +4858,7 @@ a.ui-datepicker-next {
 
 	.ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li {
 		background: #fafafa;
-		border: 1px solid #ccc !important;
+		border: 1px solid #dee2e6 !important;
 		border-width: 1px 1px 0 1px !important;
 		display: inline-block !important;
 		margin: 0 0 0 3px !important;

@@ -837,11 +837,13 @@ if ( ! function_exists( 'ot_admin_styles' ) ) {
 		// Load WP colorpicker.
 		wp_enqueue_style( 'wp-color-picker' );
 
+		$suffix = is_rtl()? '-rtl' : '';
+
 		// Load admin styles.
-		wp_enqueue_style( 'ot-admin-css', OT_URL . 'assets/css/ot-admin.css', false, OT_VERSION );
+		wp_enqueue_style( 'ot-admin-css', OT_URL . 'assets/css/ot-admin'.$suffix.'.css', false, OT_VERSION );
 
 		// Load the RTL stylesheet.
-		$wp_styles->add_data( 'ot-admin-css', 'rtl', true );
+		//$wp_styles->add_data( 'ot-admin-css', 'rtl', true );
 
 		// Remove styles added by the Easy Digital Downloads plugin.
 		if ( isset( $post->post_type ) && 'post' === $post->post_type ) {

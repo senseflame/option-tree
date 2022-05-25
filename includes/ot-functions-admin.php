@@ -638,18 +638,20 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
 			$input_safe = array();
 
 			// Loop over array.
-			foreach ( $input as $key => $value ) {
-				if ( '%key%' === $key ) {
-					continue;
-				}
+			if( !empty($input) && is_array($input) ){			
+				foreach ( $input as $key => $value ) {
+					if ( '%key%' === $key ) {
+						continue;
+					}
 
-				foreach ( $value as $fk => $fvalue ) {
-					if ( is_array( $fvalue ) ) {
-						foreach ( $fvalue as $sk => $svalue ) {
-							$input_safe[ $key ][ $fk ][ $sk ] = sanitize_text_field( $svalue );
+					foreach ( $value as $fk => $fvalue ) {
+						if ( is_array( $fvalue ) ) {
+							foreach ( $fvalue as $sk => $svalue ) {
+								$input_safe[ $key ][ $fk ][ $sk ] = sanitize_text_field( $svalue );
+							}
+						} else {
+							$input_safe[ $key ][ $fk ] = sanitize_text_field( $fvalue );
 						}
-					} else {
-						$input_safe[ $key ][ $fk ] = sanitize_text_field( $fvalue );
 					}
 				}
 			}

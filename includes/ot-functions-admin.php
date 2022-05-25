@@ -2037,8 +2037,10 @@ if ( ! function_exists( 'ot_modify_layouts' ) ) {
 				// Add new and overwrite active layout.
 				if ( isset( $layouts['_add_new_layout_'] ) && ! empty( $layouts['_add_new_layout_'] ) ) {
 					$rebuild['active_layout']             = ot_sanitize_layout_id( $layouts['_add_new_layout_'] );
-					$rebuild[ $rebuild['active_layout'] ] = ot_encode( get_option( ot_options_id(), array() ) );
+					$encoded = ot_encode( get_option( ot_options_id(), array() ) );
+					$rebuild[ $rebuild['active_layout'] ] = $encoded;
 				}
+				
 
 				$first_layout = '';
 
@@ -5057,7 +5059,7 @@ if ( ! function_exists( 'ot_decode' ) ) {
 		preg_match( '/a:\d+:{.*?}/', $decoded, $array_matches, PREG_OFFSET_CAPTURE, 0 );
 
 		// Search for an object.
-		preg_match( '/O|C:\+?\d+:"[a-z0-9_]+":\+?\d+:/i', $decoded, $obj_matches, PREG_OFFSET_CAPTURE, 0 );
+		preg_match( '/O:\+?\d+:"[a-z0-9_]+":\+?\d+:|C:\+?\d+:"[a-z0-9_]+":\+?\d+:/i', $decoded, $obj_matches, PREG_OFFSET_CAPTURE, 0 );
 
 		// Prevent object injection or non arrays.
 		if ( $obj_matches || ! $array_matches ) {

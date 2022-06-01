@@ -716,12 +716,13 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
 					}
 				}
 			}
-		} elseif ( 'typography' === $type && isset( $input['font-color'] ) ) {
+		} elseif ( 'typography' === $type ) {
 
 			$input_safe = array();
 
 			// Loop over array and check for values.
 			foreach ( $input as $key => $value ) {
+				if(empty($value)) continue;
 				if ( 'font-color' === $key ) {
 					$input_safe[ $key ] = ot_validate_setting( $value, 'colorpicker', $field_id );
 				} else {
@@ -2101,6 +2102,9 @@ if ( ! function_exists( 'ot_modify_layouts' ) ) {
 						do_action( 'ot_before_theme_options_save', $options_safe );
 
 						update_option( ot_options_id(), $options_safe );
+
+						// Execute the action hook and pass the theme options to it.
+						do_action( 'ot_after_theme_options_save', $options_safe );
 					}
 				}
 
@@ -5173,7 +5177,7 @@ if ( ! function_exists( 'ot_update_google_fonts_after_save' ) ) {
 		set_theme_mod( 'ot_set_google_fonts', $ot_set_google_fonts );
 	}
 
-	add_action( 'ot_after_theme_options_save', 'ot_update_google_fonts_after_save', 1 );
+	add_action( 'ot_after_theme_options_save', 'ot_update_google_fonts_after_save', 10 );
 }
 
 if ( ! function_exists( 'ot_fetch_google_fonts' ) ) {

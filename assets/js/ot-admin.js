@@ -23,8 +23,8 @@
       this.init_numeric_slider();
       this.init_tabs();
       this.init_radio_image_select();
-      this.init_select_wrapper();
-      this.bind_select_wrapper();
+      //this.init_select_wrapper();
+      //this.bind_select_wrapper();
       this.init_google_fonts();
       this.fix_upload_parent();
       this.fix_textarea();

@@ -8,12 +8,13 @@
 $ot-font: option-tree-font, Arial, sans-serif;
 $tab-width: 201px;
 $header-height: 120px;
-:root{
+body{
   --ot-tab-width: #{$tab-width};
   --ot-header-height: #{$header-height};
+  --ot-dark: #333;
 }
 @media only screen and (max-width: 1020px){
-  :root{
+  body{
     --ot-tab-width: calc(#{$tab-width} - 40px);
     --ot-header-height: calc(#{$header-height} - 30px);
   }
@@ -97,7 +98,7 @@ $header-height: 120px;
   height: var(--ot-header-height);
   display: flex;
   align-items: center;
-  background: #333;
+  background: var(--ot-dark);
   margin: 15px 5px 0 2px;
   border-radius: 2px 2px 0 0;
 }
@@ -175,9 +176,10 @@ $header-height: 120px;
 }
   
 /* light */
-
+.admin-color-light{
+  --ot-dark: #888;
+}
 .admin-color-light #option-tree-header {
-  background: #888;
   color: $white;
 
   li a {
@@ -206,6 +208,9 @@ $header-height: 120px;
 }
   
 /* blue */
+.admin-color-blue{
+  --ot-dark: #52accc;
+}
 
 .admin-color-blue #option-tree-header {
   background: #52accc;
@@ -237,9 +242,10 @@ $header-height: 120px;
 }
   
 /* coffee */
-
+.admin-color-coffee{
+  --ot-dark: #59524c;
+}
 .admin-color-coffee #option-tree-header {
-  background: #59524c;
   color: #c7cbc9;
 
   li a {
@@ -268,9 +274,10 @@ $header-height: 120px;
 }
   
 /* ectoplasm */
-
+.admin-color-ectoplasm{
+  --ot-dark: #523f6d;
+}
 .admin-color-ectoplasm #option-tree-header {
-  background: #523f6d;
   color: #c6c6d3;
 
   li a {
@@ -299,9 +306,10 @@ $header-height: 120px;
 }
   
 /* midnight */
-
+.admin-color-midnight{
+  --ot-dark: #363b3f;
+}
 .admin-color-midnight #option-tree-header {
-  background: #363b3f;
   color: $gray-100;
 
   li a {
@@ -330,9 +338,10 @@ $header-height: 120px;
 }
   
 /* ocean */
-
+.admin-color-ocean{
+  --ot-dark: #738e96;
+}
 .admin-color-ocean #option-tree-header {
-  background: #738e96;
   color: #f1fcff;
 
   li a {
@@ -361,9 +370,10 @@ $header-height: 120px;
 }
   
 /* sunrise */
-
+.admin-color-sunrise{
+  --ot-dark: #da4f41;
+}
 .admin-color-sunrise #option-tree-header {
-  background: #da4f41;
   color: $white;
 
   li a {
@@ -560,7 +570,7 @@ $header-height: 120px;
 
 #option-tree-settings-api {
   h4 {
-    color: #333;
+    color: var(--ot-dark);
     font-size: 1.2em;
     font-weight: 500;
     line-height: 1.25;
@@ -682,7 +692,7 @@ $header-height: 120px;
 
 #option-tree-settings-api code, .ot-metabox-wrapper code {
   background-color: #f1f1f1;
-  color: #333;
+  color: var(--ot-dark);
   font-size: 12px;
 }
 
@@ -927,7 +937,7 @@ div.option-tree-ui-media-wrap {
   }
 
   .open {
-    background: #333;
+    background: var(--ot-dark);
     color: #bbb;
   }
 }
@@ -937,7 +947,7 @@ div.option-tree-ui-media-wrap {
 }
 
 .option-tree-setting.is-section .open:hover, .format-setting .ui-sortable-helper .option-tree-setting.is-section .open {
-  background: #333;
+  background: var(--ot-dark);
 }
 
 /* light */
@@ -1239,6 +1249,9 @@ li ul {
   position: relative;
   width: 20%;
   box-sizing: border-box;
+  select{
+    width: 100%;
+  }
 }
 
 .ot-option-group--three-fourths {
@@ -1364,8 +1377,6 @@ li ul {
 
 select.option-tree-ui-select {
   margin: 0 5px 5px 0;
-  max-width: 100%;
-  width: auto; 
 }
 
 
@@ -1522,7 +1533,7 @@ select.option-tree-ui-select {
     width: 16px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 rgba(0, 0, 0, 0.08);
     border-radius: 2px;
-    background: #333;
+    background: var(--ot-dark);
     border-color: $black;
 
     &:hover, &.ui-state-active {
@@ -2121,7 +2132,7 @@ ul.ot-gallery-list {
   .on-off-switch {
     background-color: $white;
     border: 1px solid $gray-300;
-    color: #333;
+    color: var(--ot-dark);
     display: block;
     font-size: 12px;
     font-weight: normal;
@@ -2159,7 +2170,7 @@ ul.ot-gallery-list {
 
     input {
       &:last-of-type + label, &:checked + label {
-        color: #333;
+        color: var(--ot-dark);
       }
 
       &:last-of-type:checked + label {
@@ -2450,7 +2461,7 @@ ul.ot-gallery-list {
     height: 30px;
   }
 
-  border-right: 1px solid #333;
+  border-right: 1px solid var(--ot-dark);
   float: left;
 }
 
@@ -2464,7 +2475,7 @@ ul.ot-gallery-list {
     height: 30px;
   }
 
-  border-left: 1px solid #333;
+  border-left: 1px solid var(--ot-dark);
   float: right;
   width: 31px;
 }
@@ -2621,7 +2632,7 @@ a {
     &:active {
       background: #eee;
       border-color: #999;
-      color: #333;
+      color: var(--ot-dark);
       outline: 0;
       -webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
@@ -2668,7 +2679,7 @@ a {
 /* default color scheme */
 
 .ui-datepicker .ui-widget-header {
-  background: #333;
+  background: var(--ot-dark);
   color: #bbb;
 
   a {
@@ -3041,7 +3052,7 @@ a {
       &.ui-state-active {
         background: #eee;
         border-color: #999;
-        color: #333;
+        color: var(--ot-dark);
         outline: none;
       }
     }
@@ -3106,7 +3117,7 @@ a {
 /* default */
 
 .ui-timepicker-div .ui-slider-horizontal .ui-slider-handle {
-  background: #333;
+  background: var(--ot-dark);
   border-color: $black;
 
   &:hover, &.ui-state-active {

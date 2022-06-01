@@ -84,7 +84,7 @@ if ( ! class_exists( 'OT_Loader' ) && defined( 'ABSPATH' ) ) {
 			/**
 			 * Current Version number.
 			 */
-			define( 'OT_VERSION', '2.7.3' );
+			define( 'OT_VERSION', '2.7.3'.WP_DEBUG? time() : '' );
 
 			/**
 			 * For developers: Theme mode.

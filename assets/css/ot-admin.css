@@ -1598,7 +1598,6 @@ body {
 	flex-wrap: wrap;
 	min-width: 535px;
 	position: relative;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 #option-tree-header li {
@@ -1666,7 +1665,6 @@ body {
 }
 
 .admin-color-light #option-tree-header {
-	background: #888;
 	color: #fff;
 }
 
@@ -2223,8 +2221,6 @@ body {
   ---------------------------------------------------*/
 input.option-tree-ui-upload-input,
 input.option-tree-ui-input {
-	background: #fff;
-	border: 1px solid #dee2e6 !important;
 	line-height: 17px;
 	font-size: 12px;
 	margin-bottom: 5px !important;
@@ -2237,13 +2233,7 @@ input.option-tree-ui-input {
 
 input:hover.option-tree-ui-upload-input,
 input:hover.option-tree-ui-input {
-	border-color: #bbb !important;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0980392);
-}
-
-input:focus.option-tree-ui-upload-input,
-input:focus.option-tree-ui-input {
-	border-color: #999 !important;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {

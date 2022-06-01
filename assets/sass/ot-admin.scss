@@ -5,8 +5,20 @@
 @import "mixins";
 @import "utilities";
 
-$ot-font: option-tree-font, system-ui, -apple-system, Arial, sans-serif;
+$ot-font: option-tree-font, Arial, sans-serif;
 $tab-width: 201px;
+$header-height: 120px;
+:root{
+  --ot-tab-width: #{$tab-width};
+  --ot-header-height: #{$header-height};
+}
+@media only screen and (max-width: 1020px){
+  :root{
+    --ot-tab-width: calc(#{$tab-width} - 40px);
+    --ot-header-height: calc(#{$header-height} - 30px);
+  }
+}
+
 
 @import "ot-fonts";
 /* -------------------------------------------------- 
@@ -57,7 +69,7 @@ $tab-width: 201px;
     min-width: 533px;
     padding-bottom: 5px;
     position: relative;
-    box-shadow: inset calc($tab-width - 5px) 0 0 #f1f1f1, inset calc($tab-width - 4px) 0 0 $gray-300, 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: inset calc(var(--ot-tab-width) - 5px) 0 0 #f1f1f1, inset calc(var(--ot-tab-width) - 4px) 0 0 $gray-300, 0 1px 3px rgba(0, 0, 0, 0.05);
     border-radius: 0 0 2px 2px;
   }
 }
@@ -82,30 +94,32 @@ $tab-width: 201px;
 
 #option-tree-header-wrap {
   position: relative;
+  height: var(--ot-header-height);
+  display: flex;
+  align-items: center;
+  background: #333;
+  margin: 15px 5px 0 2px;
+  border-radius: 2px 2px 0 0;
 }
 
-#option-tree-header {
-  background: #333;
+#option-tree-header {  
   color: #bbb;
-  display: block;
-  margin: 11px 5px 0 2px;
+  display: flex;
+  row-gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
   min-width: 535px;
-  overflow: hidden;
   position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  border-radius: 2px 2px 0 0;
+  
 
-  li {
-    display: block;
-    float: left;
+  li {    
     margin: 0px;
     padding: 0px;
 
     a {
       color: #999;
       text-decoration: none;
-      -webkit-transition: none;
-      -moz-transition: none;
       transition: none;
 
       &:hover {
@@ -114,45 +128,30 @@ $tab-width: 201px;
     }
   }
 
-  #option-tree-logo a {
-    border-right: 1px solid $black;
-    float: left;
-    height: 24px;
-    padding: 3px 12px 3px 13px;
-    width: 20px;
-
-    &:before {
-      content: "\e785";
-      font: normal 20px/1 $ot-font !important;
-      padding: 2px 0;
-      height: 24px;
-      width: 20px;
-      display: inline-block;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      transition: all .1s ease-in-out;
+  #option-tree-logo {
+    min-width: var(--ot-tab-width);
+    .theme-logo{
+      color: #fff;      
+      margin: 0;
+      line-height: 1;
+      display: flex;
+      column-gap: 5px;
+      align-items: center;
+      padding: 0 13px;
+      font-weight: bold;
+      font-size: 24px;
+      
     }
-  }
-
-  li#option-tree-logo:hover {
-    background-color: #222;
-    color: #0074a2;
-    -webkit-border-top-left-radius: 2px;
-    -moz-border-radius-topleft: 2px;
-    border-top-left-radius: 2px;
-
-    a {
-      border-right-color: $black;
+    a{
+      color: #fff;
+      border-right: none;
     }
-  }
+  } 
 
   #option-tree-version span {
     border-left: 1px solid #444;
     display: block;
-    float: left;
-    height: 24px;
-    line-height: 24px;
-    padding: 3px 12px 3px 12px;
+    padding: 0 12px;
   }
 
   #theme-version {
@@ -419,7 +418,7 @@ $tab-width: 201px;
     list-style: none;
     margin: 0 0 0 -4px;
     padding: 1em 0;
-    width: $tab-width;
+    width: var(--ot-tab-width);
 
     li {
       border: 1px solid transparent;
@@ -1183,8 +1182,10 @@ li ul {
 #option-tree-options-layouts-form {
   left: 13px;
   position: absolute;
-  top: 30px;
+  top: var(--ot-header-height);
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
 .option-tree-save-layout {
@@ -1197,7 +1198,7 @@ li ul {
 
   .widefat {
     float: left;
-    width: calc($tab-width - 15px) !important;
+    width: calc(var(--ot-tab-width) - 15px) !important;
     margin: 0;
   }
 }
@@ -1206,7 +1207,7 @@ li ul {
   border-right: 1px solid $gray-300;
   float: left;
   padding: 10px 10px 10px 0;
-  min-width: calc($tab-width - 25px);
+  min-width: calc(var(--ot-tab-width) - 27px);
 }
 
 .button.save-layout {
@@ -1360,54 +1361,13 @@ li ul {
   :: Select
   ---------------------------------------------------*/
 
-.select-wrapper {
-  background: #fff url(../images/ot-select.png) no-repeat right center;
-  border: 1px solid $gray-300;
-  display: block;
-  float: left;
-  font-size: 12px;
-  height: 29px;
-  margin: 0 5px 5px 0;
-  max-width: 100%;
-  width: auto;
-  border-radius: 2px;
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
-  box-sizing: border-box;
-
-  &:hover {
-    background-image: url(../images/ot-select-hover.png);
-    border-color: #999;
-  }
-}
 
 select.option-tree-ui-select {
-  cursor: pointer;
-  font-size: 14px;
-  height: 29px;
-  margin: 0;
+  margin: 0 5px 5px 0;
   max-width: 100%;
-  -moz-opacity: 0;
-  opacity: 0;
-  padding: 0 !important;
-  position: relative;
-  width: inherit;
-  z-index: 4;
-  min-width: 118px;
-
-  option {
-    padding: 3px 15px !important;
-  }
+  width: auto; 
 }
 
-.select-wrapper span {
-  height: 27px;
-  line-height: 27px;
-  overflow: hidden;
-  padding-left: 7px;
-  padding-right: 27px;
-  position: absolute;
-  z-index: 2;
-}
 
 #option-tree-options-layouts-form {
   .select-wrapper {
@@ -3266,7 +3226,7 @@ a {
     list-style: none;
     margin: 0 -1px 0 0;
     padding: 18px 0 12px 0;
-    width: $tab-width;
+    width: var(--ot-tab-width);
 
     li {
       background: none;
@@ -3276,7 +3236,7 @@ a {
       margin: 0;
       outline: 0;
       padding: 1px 0;
-      width: calc($tab-width - 1px);
+      width: calc(var(--ot-tab-width) - 1px);
       border-radius: 2px 0 0 2px;
 
       &.ui-state-focus {
@@ -3287,7 +3247,7 @@ a {
         margin: 0;
         outline: 0;
         padding: 1px 0;
-        width: calc($tab-width - 1px);
+        width: calc(var(--ot-tab-width) - 1px);
         border-radius: 2px 0 0 2px;
       }
 
@@ -3520,4 +3480,14 @@ a {
       clear: both;
     }
   }
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ot-background-group,
+.type-typography  .format-setting-inner{
+    @include flex-wrap()
 }
